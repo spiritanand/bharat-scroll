@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "serve-favicon": "^2.5.0"
+  },
+  "name": "bharat-scroll",
+  "version": "1.0.0",
+  "main": "contents.js",
+  "scripts": {
+    "start": "node contents",
+    "dev": "nodemon contents"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spiritmonster/Bharat-Scroll.git"
+  },
+  "author": "Spirit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spiritmonster/Bharat-Scroll/issues"
+  },
+  "homepage": "https://github.com/spiritmonster/Bharat-Scroll#readme",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "engines": {
+    "node": "18.x",
+    "npm": "8.15.0"
+  }
+}

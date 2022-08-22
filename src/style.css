@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@700&family=Poppins:wght@300;500&display=swap');
+
+/*
+font-family: 'Cormorant SC', serif;
+font-family: 'Poppins', sans-serif;
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    /*Indian flag colors*/
+    --saffron-100: #f5b795;
+    --saffron-300: #e58d5b;
+    --saffron-500: #ea781a;
+    --saffron-700: #b2570a;
+    --navy-blue-100: #4f84e5;
+    --navy-blue-300: #3d66af;
+    --navy-blue-500: #32518a;
+    --navy-blue-700: #2a4576;
+    --white: #d3d3d3;
+    --green-100: #427456;
+    --green-300: #3b694f;
+    --green-500: #365e45;
+    --green-700: #2f543f;
+
+    --lg-font-size: clamp(2em, 5vh, 2.5rem);
+    --md-font-size: clamp(1.5rem, 4vh, 2rem);
+    --sm-font-size: clamp(1rem, 2vh, 1.5rem);
+
+    --lg-font: 'Cormorant SC', serif;
+    --sm-font: 'Poppins', sans-serif;
+}
+
+/*Global*/
+body {
+    margin: 0;
+    background-color: var(--white);
+    background-image: linear-gradient(
+            to bottom, #ea781a, #ff7964, #ff8a9c, #eea2c4, #d9bad7, #c4bbd6, #b5bbcf,
+            #afb9c3, #8ca8b3, #68989c, #4d877c, #427456
+    );
+    color: var(--navy-blue-700);
+}
+
+
+h1, h3 {
+    font-family: var(--lg-font);
+}
+
+h1 {
+    text-transform: uppercase;
+    line-height: 2rem;
+    font-size: var(--lg-font-size);
+}
+
+h2 {
+    color: var(--navy-blue-700);
+    font-family: var(--sm-font);
+    font-weight: 500;
+    font-size: var(--md-font-size);
+    text-shadow: 1px 1px 2px #000000;
+    margin: 0 auto;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+}
+
+p {
+    color: var(--navy-blue-700);
+    font-family: var(--sm-font);
+    font-weight: 300;
+    font-size: var(--sm-font-size);
+    line-height: 1.5rem;
+
+}
+
+/*Scrollbar*/
+body::-webkit-scrollbar {
+    width: 0.2rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: linear-gradient(to bottom,
+    var(--saffron-700), var(--saffron-500), var(--saffron-100),
+    var(--green-100), var(--green-500), var(--green-700));
+}
+
+/*Box*/
+.box {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/*Navbar*/
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0.5rem auto;
+    z-index: 1;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo a {
+    flex: 1 1 40%;
+    text-align: right;
+}
+
+.navbar img {
+    width: 75%;
+}
+
+.navbar h1 {
+    flex: 1 1 40%;
+    text-align: left;
+    margin: 0;
+}
+
+/*Contents*/
+.contents {
+    margin-top: 4.5rem;
+    margin-bottom: 2rem;
+    background-color: var(--white);
+    opacity: 0.9;
+}
+
+.content {
+    padding: 1.5rem 0;
+    text-align: center;
+    display: none;
+    animation: scroll 0.5s;
+}
+
+@keyframes scroll {
+    from{
+        transform: scale(0,1);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1,1);
+        opacity: 1;
+    }
+}
+
+.content p {
+    padding: 1rem;
+    /*background: var(--white);*/
+    text-align: justify;
+    max-width: min(90%, 650px);
+    margin: 0 auto;
+    font-weight: bolder;
+}
+
+.content-active {
+    display: block;
+}
+
+.content-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0.3;
+    background-image: url("Images/indian-temple.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.more-section {
+    margin-top: 1rem;
+    text-align: right;
+    margin-right: 2rem;
+}
+
+.more-section a,
+.more-section a:visited {
+    padding: 0.25rem;
+    font-size: var(--sm-font-size);
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--navy-blue-700);
+}
+
+.more-section a:hover {
+    color: var(--navy-blue-100);
+}
+
+/*Timeline*/
+.timeline {
+    width: min(80%, 500px);
+    margin: -1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.timeline > button {
+    flex: 1 1 10%;
+    border: none;
+    background-color: var(--white);
+
+}
+
+.prev,
+.next {
+    border-radius: 100px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.5rem 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 1rem;
+
+}
+
+.next {
+    background-color: var(--green-100);
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
+    color: var(--green-700);
+}
+
+
+.next:hover {
+    box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, .25) 0 1px 2px,
+    rgba(44, 187, 99, .25) 0 2px 4px,
+    rgba(44, 187, 99, .25) 0 4px 8px,
+    rgba(44, 187, 99, .25) 0 8px 16px,
+    rgba(44, 187, 99, .25) 0 16px 32px;
+    transform: scale(1.1);
+}
+
+.prev {
+    background-color: var(--saffron-100);
+    box-shadow: var(--saffron-300) 0 -25px 18px -14px inset,
+    var(--saffron-300) 0 1px 2px,
+    var(--saffron-300) 0 2px 4px,
+    var(--saffron-300) 0 4px 8px;
+    color: var(--saffron-700);
+}
+
+.prev:hover {
+    box-shadow: var(--saffron-300) 0 -25px 18px -14px inset,
+    var(--saffron-300) 0 1px 2px,
+    var(--saffron-300) 0 2px 4px,
+    var(--saffron-300) 0 4px 8px,
+    var(--saffron-300) 0 8px 16px;
+    transform: scale(1.1);
+}
+
+.time-stamps {
+    flex: 1 1 50%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.time-stamp {
+    font-size: clamp(1.5rem, 3.5vh, 2rem);
+    text-decoration: none;
+    text-align: center;
+    display: none;
+    text-shadow: 2px 2px 3px black;
+}
+
+.time-stamp h2 {
+    margin: 0;
+    color: var(--white);
+    font-size: clamp(1.5rem, 2vh, 2rem);
+}
+
+.time-stamp-active {
+    display: block;
+}
+
+/*Footer*/
+footer {
+    /*height: 1vh;*/
+    display: block;
+    background-color: rgb(3, 2, 1);
+    padding: 0.5rem;
+}
+
+footer h3 {
+    margin: 0;
+    color: var(--saffron-100);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.footer-img {
+    display: block;
+    width: min(10%, 35px);
+    margin: 0.25rem auto 0;
+    padding: 0.25rem;
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+    }
+
+    .navbar {
+        top: 2rem;
+    }
+
+    .navbar img {
+        width: 40%;
+    }
+
+    .more-section {
+        text-align: center;
+    }
+}
