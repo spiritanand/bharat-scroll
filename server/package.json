@@ -21,7 +21,7 @@
     "url": "https://github.com/spiritmonster/Bharat-Scroll/issues"
   },
   "homepage": "https://github.com/spiritmonster/Bharat-Scroll#readme",
-  "description": "",
+  "description": "This project is a tribute to the rich history of India. It represents the History of India in a chronological order. I have used \nthe Wikipedia API to get the articles of different time periods of Bharatiya history.",
   "devDependencies": {
     "nodemon": "^2.0.19"
   },

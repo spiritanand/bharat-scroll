@@ -1,5 +1,11 @@
+const fadeWrapper = $("#fade-wrapper");
+fadeWrapper.on("click", () => {
+    fadeWrapper.on("click", () => fadeWrapper.css("display", "none")
+    )
+});
+
 const contentHTML = async () => {
-    const articleJSON = await fetch(`https://bharat-scroll.herokuapp.com/data_results` ||`/data_results`)
+    const articleJSON = await fetch(`https://bharat-scroll.herokuapp.com/data_results` || `/data_results`)
         .then(res => res.json());
 
     let articleImg = [];
