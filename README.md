@@ -1,6 +1,6 @@
 # The Bharat Scroll
 
-This project is a tribute to the rich history of Bharat. It represents the History of India in a chronological order. I have used 
+This project is a tribute to the rich history of Bharat. It represents the History of Bharat in a chronological order. I have used 
 the **Wikipedia API** to get the articles of different time periods of Bharatiya history.
 
 ## Tech Stack Used
