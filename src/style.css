@@ -27,8 +27,8 @@ font-family: 'Poppins', sans-serif;
     --green-500: #365e45;
     --green-700: #2f543f;
 
-    --lg-font-size: clamp(2em, 5vh, 2.5rem);
-    --md-font-size: clamp(1.5rem, 4vh, 2rem);
+    --lg-font-size: clamp(1.5em, 4.5vh, 3rem);
+    --md-font-size: clamp(1.5rem, 3.5vh, 2rem);
     --sm-font-size: clamp(1rem, 2vh, 1.5rem);
 
     --lg-font: 'Cormorant SC', serif;
