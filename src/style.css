@@ -179,6 +179,7 @@ body::-webkit-scrollbar-track {
 
 /*Contents*/
 .contents {
+    margin-top: 4.5rem;
     margin-bottom: 2rem;
     background-color: var(--white);
     opacity: 0.9;
