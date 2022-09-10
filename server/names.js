@@ -21,7 +21,7 @@ const namesRaw = [
     "Colonial India",
     "Bengali Renaissance",
     "Indian independence movement",
-    "Independence Day (India)"
+    "Independence Day (India)",
 ];
 
 // Making all the names URL ready

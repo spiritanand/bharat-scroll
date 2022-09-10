@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const axios = require('axios').default;
-const PORT = process.env.PORT || 4040;
+const PORT = process.env.PORT || 400;
 
 const names = require("./names").names;
 const namesRaw = require("./names").namesRaw;
@@ -38,20 +38,14 @@ app.get("/data_results", (req, res) => {
         for (let i in articleResponse) {
             // Mapping the keys of the JSON data of query to its values.
             let article =
-                Object.keys(articleResponse[i].data.query.pages).map(key => articleResponse[i].data.query.pages[key])[0]
+                Object.keys(articleResponse[i].data.query.pages).map(key => articleResponse[i].data.query.pages[key])[0].extract
             
             let img =
                 Object.keys(imgResponse[i].data.query.pages).map(key => imgResponse[i].data.query.pages[key])[0].thumbnail;
             
-            if (!article)
-                article = "No article found."
-            else
-                article = article.extract.substring(0, 350) + `...`;
+            article = (!article) ? "No article found." : article.substring(0, 350) + `...`;
             
-            if (!img)
-                img = `../src/Images/indian-temple.webp`;
-            else
-                img = img.source;
+            img = (!img) ? `../src/Images/indian-temple.webp` : img.source;
             
             let articleName = namesRaw[i];
             articleObjects.push({
