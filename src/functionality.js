@@ -5,7 +5,7 @@ fadeWrapper.on("click", () => {
 });
 
 const contentHTML = async () => {
-    const articleJSON = await fetch(`https://bharat-scroll.herokuapp.com/data_results` || `/data_results`)
+    const articleJSON = await fetch(`https://bharat-scroll-production.up.railway.app/data_results`)
         .then(res => res.json());
 
     let articleImg = [];
