@@ -8,7 +8,7 @@ the **Wikipedia API** to get the articles of different time periods of Bharatiya
 - HTML, CSS, JS (with jquery) for frontend,
 - Node.js and Express for running the server and making API calls (backend) and 
 - Wikipedia API to get data and images for the articles. Data is taken from the API then formatted. It is fetched from
-[here](https://bharat-scroll.herokuapp.com/data_results) to be used on my frontend.
+[here](https://bharat-scroll-production.up.railway.app/data_results) to be used on my frontend.
 
 ## Desktop 🖥
 <img src="src/Images/Desktop-view.png" width="80%"  alt="Desktop-view"/>
